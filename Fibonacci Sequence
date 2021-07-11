@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main (void)
+{
+
+int Index = get_int("How many Fibonacci numbers do you want to calculate? ");
+int Fibonacci [Index];
+int i;
+
+Fibonacci [0] = 0;
+Fibonacci [1] = 1;
+
+for (i = 2; i < Index; i++)
+    Fibonacci [i] = Fibonacci[i-2] + Fibonacci[i-1];
+
+printf ("\nFibonacci Sequence: \n");
+printf ("\nindex  values \n");
+printf ("----   ------\n");
+
+
+for (i = 0; i < Index; i++)
+    printf("%i%7i\n", i , Fibonacci[i]);
+    
+return 0;
+}
